@@ -349,7 +349,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1607977710945986, guid: 521525df886f5c743bd05e6a1fa89c11,
     type: 2}
   m_PrefabInternal: {fileID: 1399514681}
---- !u!114 &475800090
+--- !u!114 &475800092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c282c209ba7b041bd005aa82b22d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myEnemy: {fileID: 898155025}
+  myEnemy: {fileID: 0}
 --- !u!1001 &496895751
 Prefab:
   m_ObjectHideFlags: 0
@@ -586,12 +586,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd45edb49f55984f95c74684c782882, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &788444591 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114825223182052176, guid: 521525df886f5c743bd05e6a1fa89c11,
-    type: 2}
-  m_PrefabInternal: {fileID: 2110079690}
-  m_Script: {fileID: 11500000, guid: 7af5c725bd7139641afa1eb469b4439e, type: 3}
 --- !u!1001 &798443267
 Prefab:
   m_ObjectHideFlags: 0
@@ -915,11 +909,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee761acbc133334cbed824b555d9b56, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &898155025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1405855269823536, guid: 521525df886f5c743bd05e6a1fa89c11,
-    type: 2}
-  m_PrefabInternal: {fileID: 1399514681}
 --- !u!1001 &959091497
 Prefab:
   m_ObjectHideFlags: 0
@@ -1234,6 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b7cb5ddb92bc042bd9a59ef01ca8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadfirstscene: "niv\xE51"
 --- !u!212 &1264845814
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1670,8 +1660,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 41
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114816905207397150, guid: 521525df886f5c743bd05e6a1fa89c11, type: 2}
+    - target: {fileID: 60303394301785298, guid: 521525df886f5c743bd05e6a1fa89c11,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60303394301785298, guid: 521525df886f5c743bd05e6a1fa89c11,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e23d6bfe36882c6419fdef9625636765, type: 2}
+    - target: {fileID: 50340577646310584, guid: 521525df886f5c743bd05e6a1fa89c11,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521525df886f5c743bd05e6a1fa89c11, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1424586465
@@ -1873,6 +1877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17b7cb5ddb92bc042bd9a59ef01ca8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadfirstscene: "niv\xE51"
 --- !u!1001 &1458139942
 Prefab:
   m_ObjectHideFlags: 0
@@ -2341,6 +2346,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4932470827760118, guid: 406f690fc1d8ff34a9f685d30fb10a49, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61785653556439480, guid: 406f690fc1d8ff34a9f685d30fb10a49,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10402,11 +10412,10 @@ Prefab:
       propertyPath: m_Name
       value: EnemyRat (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 114816905207397150, guid: 521525df886f5c743bd05e6a1fa89c11,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: killenemy
       value: 
-      objectReference: {fileID: 788444591}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521525df886f5c743bd05e6a1fa89c11, type: 2}
   m_IsPrefabAsset: 0
