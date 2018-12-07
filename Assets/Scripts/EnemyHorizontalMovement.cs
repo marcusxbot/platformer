@@ -8,37 +8,37 @@ public class EnemyHorizontalMovement : MonoBehaviour
     public bool isLeft = true;
     private Rigidbody2D rbody;
     
-    void Start()
+    void Start() // Use this for initialization
     {
-        rbody = GetComponent<Rigidbody2D>();
-        Move(false);
+        rbody = GetComponent<Rigidbody2D>(); // makes it able to use Rigidbody2D
+        Move(false); // gör så att move är false
     }
 
     
-    void Update()
+    void Update() // Update is called once per frame
     {   
         if (Input.GetKeyDown(KeyCode.H)) // if press H
         {
-            Move(true); // move is true
+            Move(true);  // gör så att move blir true
         }
     }
 
-    void Move(bool flip)
+    void Move(bool flip) // 
     {
-        if (flip == true)
+        if (flip == true) // om flip är true
         {
-            isLeft = !isLeft;
+            isLeft = !isLeft; // gör så att isleft blir till !isleft
         }
 
-        if (isLeft == true)
+        if (isLeft == true) // om isleft är true 
         {
-            rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y);
-            transform.localScale = new Vector3(1, 1, 1);
+            rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y); // visar vilket håll objectet åker
+            transform.localScale = new Vector3(1, 1, 1); // visar vilket håll objectet tittar
         }
-        else
+        else // om inte
         {
-            rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y);
-            transform.localScale = new Vector3(-1, 1, 1);
+            rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y); // visar vilket håll objectet åker
+            transform.localScale = new Vector3(-1, 1, 1); // visar vilket håll objectet tittar
         }
     }
 
@@ -46,7 +46,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
     {
         if(collision.tag == "InvisibleWall") // if object has tag player
         {
-            Move(true);
+            Move(true); // det gör så att move blir true
         }
     }
 }

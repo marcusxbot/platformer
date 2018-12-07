@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - InvisibleWall
   - EnemyBoss
+  - Ability
   layers:
   - Default
   - TransparentFX

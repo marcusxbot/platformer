@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetKilled : MonoBehaviour
-
+public class SpeedStone : MonoBehaviour
 {
-    public GameObject myEnemy;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Destroy(myEnemy);
+            Destroy(gameObject);
         }
     }
 

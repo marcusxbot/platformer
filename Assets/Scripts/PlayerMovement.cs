@@ -5,17 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Range(0, 20f)]
-    public float moveSpeed;
-    public float jumpHeight;
+    
+    public float moveSpeed = 6;
+    public float jumpHeight = 20;
 
     private Rigidbody2D rbody;
     public GroundCheck groundCheck;
+   
 
     
     void Start() // Use this for initialization
     {
-        rbody = GetComponent<Rigidbody2D>();
+        rbody = GetComponent<Rigidbody2D>(); // it gets Rigidbody
     }
 
     
@@ -29,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight); // make able to jump
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) // if object enter the 2D collider
+    {
+        if (collision.tag == "Ability") // Only if the object have tag Ability
+        {
+            moveSpeed = moveSpeed * 1.5f; //increses moveSpeed
         }
     }
 }

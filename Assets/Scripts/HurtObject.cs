@@ -6,15 +6,17 @@ using UnityEngine.SceneManagement;
 public class HurtObject : MonoBehaviour
 {
     
-    public string loadfirstscene = "nivå1";
+    public string load = "nivå1";
 
-    public void OnColliderEnter2D(Collision2D collision) // if object touch
+
+    private void OnTriggerEnter2D(Collider2D collision) // if object enter the 2D collider
     {
-        if(collision.gameObject.tag == "Player") // if objeckt with tag player touch
+        if(collision.tag == "Player") // Only if the object have tag Player
         {
-            Scene active = SceneManager.GetActiveScene();  // makes scene load
-            SceneManager.LoadScene(loadfirstscene);
+            
+            print("You died"); //print letters
+            
+            SceneManager.LoadScene(load); //loads scene
         }
     }
-
 }
